@@ -3,13 +3,26 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+   "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "test": "npm run cy:run"
+    
   },
-  "keywords": [],
+  "keywords": [
+    "cypress",
+    "e2e",
+    "testing",
+    "pom"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^15.15.0"
+    "cypress": "^15.15.0",
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "cypress-multi-reporters": "^1.6.4",
+    "mocha-junit-reporter": "^2.0.2",
+    "mochawesome": "^7.1.3"
   }
+  
 }
