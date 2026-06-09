@@ -1,0 +1,37 @@
+name: Cypress WithPom
+
+on:
+  workflow_dispatch:
+
+jobs:
+
+  cypress-test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+
+      - name: Instalar dependências
+        run: npm ci
+
+
+      - name: Executar Cypress
+        run: npx cypress run
+
+
+      - name: Salvar evidências
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: screenshots
+          path: cypress/screenshots
