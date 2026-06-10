@@ -11,7 +11,7 @@ describe('TC001 Login Page',() => {
             cy.url().should('include', '/inventory.html');
         });
     });
-     describe.only('TC001.02 Login with invalid credentials', () => {
+     describe('TC001.02 Login with invalid credentials', () => {
         it('should display an error message with invalid credentials', () => {
             // Fill in the login form with invalid credentials
             loginActions.fillLoginForm("invalid_user", "invalid_password");
