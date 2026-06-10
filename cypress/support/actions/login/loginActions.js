@@ -12,6 +12,8 @@ class LoginActions{
     clickLoginButton(){
         cy.get(lPL.LoginButton).click();
     }
+    
+    
 
 
 }
