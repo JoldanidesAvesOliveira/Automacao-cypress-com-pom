@@ -2,37 +2,50 @@
 name: Cypress WithPom
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+    branches:
+      - main
+      - master
 
 jobs:
-
   cypress-test:
-
     runs-on: ubuntu-latest
-
     steps:
-
       - name: Checkout do código
         uses: actions/checkout@v4
-
 
       - name: Configurar Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
 
+      - name: Cache npm
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
 
       - name: Instalar dependências
         run: npm ci
 
+      - name: Verificar Cypress
+        run: npx cypress verify
 
       - name: Executar Cypress
-        run: npx cypress run
+        run: npm test
 
-
-      - name: Salvar evidências
-        if: failure()
+      - name: Upload de artefatos
+        if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: screenshots
-          path: cypress/screenshots
+          name: cypress-artifacts
+          path: |
+            cypress/screenshots
+            cypress/videos
+            cypress/reports
