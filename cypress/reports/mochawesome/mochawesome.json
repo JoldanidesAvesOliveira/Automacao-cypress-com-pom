@@ -1,0 +1,164 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-11T17:04:27.096Z",
+    "end": "2026-06-11T17:04:31.535Z",
+    "duration": 4439,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ca7a97a6-86a3-43c0-baf2-50bfb422de05",
+      "title": "",
+      "fullFile": "cypress\\e2e\\smoke\\001_login_page.cy.js",
+      "file": "cypress\\e2e\\smoke\\001_login_page.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "17955122-f6c0-4ed0-a65a-4ccab4a7cc10",
+          "title": "TC001 Login Page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "01c76625-6e64-4cbf-84ad-981494f41d81",
+              "title": "TC001.01 Login with valid credentials",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should login successfully",
+                  "fullTitle": "TC001 Login Page TC001.01 Login with valid credentials should login successfully",
+                  "timedOut": null,
+                  "duration": 3202,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_loginActions.default.fillLoginForm(\"standard_user\", \"secret_sauce\");\n_loginActions.default.clickLoginButton();\ncy.url().should('include', '/inventory.html');",
+                  "err": {},
+                  "uuid": "1fc941e6-4afd-49c1-a600-6512fdcaa486",
+                  "parentUUID": "01c76625-6e64-4cbf-84ad-981494f41d81",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "1fc941e6-4afd-49c1-a600-6512fdcaa486"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 3202,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "13c33b0a-f5ce-409b-810d-db26e6d65e2c",
+              "title": "TC001.02 Login with invalid credentials",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should display an error message with invalid credentials",
+                  "fullTitle": "TC001 Login Page TC001.02 Login with invalid credentials should display an error message with invalid credentials",
+                  "timedOut": null,
+                  "duration": 1053,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "// Fill in the login form with invalid credentials\n_loginActions.default.fillLoginForm(\"invalid_user\", \"invalid_password\");\n_loginActions.default.clickLoginButton();\ncy.get(\"[data-test='error']\").should(\"be.visible\").and(\"contain\", \"Epic sadface: Username and password do not match any user in this service\");",
+                  "err": {},
+                  "uuid": "8ead99c6-ab8c-4973-aa65-51ecefac89b8",
+                  "parentUUID": "13c33b0a-f5ce-409b-810d-db26e6d65e2c",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "8ead99c6-ab8c-4973-aa65-51ecefac89b8"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1053,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
