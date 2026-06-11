@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+echo "[CI] Installing dependencies..."
+npm ci
+
+echo "[CI] Verifying Cypress installation..."
+npm run cypress:verify
+
+echo "[CI] Running Cypress tests with reporters..."
+npm run cy:run:ci

@@ -6,8 +6,10 @@
   "scripts": {
     "cy:open": "npx cypress open",
     "cy:run": "npx cypress run",
+    "cy:run:ci": "npx cypress run --reporter cypress-multi-reporters",
     "cypress:verify": "npx cypress verify",
-    "test": "npm run cy:run"
+    "test": "npm run cy:run",
+    "test:ci": "npm run cypress:verify && npm run cy:run:ci"
   },
   "keywords": [
     "cypress",
@@ -18,10 +20,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^15.15.0",
-    "cypress-mochawesome-reporter": "^3.8.2",
-    "cypress-multi-reporters": "^1.6.4",
-    "mocha-junit-reporter": "^2.0.2",
-    "mochawesome": "^7.1.3"
+    "cypress": "^15.17.0",
+    "cypress-mochawesome-reporter": "^4.0.2",
+    "cypress-multi-reporters": "^2.0.5",
+    "mocha-junit-reporter": "^2.2.1",
+    "mochawesome": "^7.1.4"
   }
 }
