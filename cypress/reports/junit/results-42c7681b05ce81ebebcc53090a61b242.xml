@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="3.864" tests="2" failures="0">
+  <testsuite name="Root Suite" timestamp="2026-06-11T18:27:13" tests="0" file="cypress\e2e\smoke\001_login_page.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="TC001 Login Page" timestamp="2026-06-11T18:27:13" tests="0" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="TC001.01 Login with valid credentials" timestamp="2026-06-11T18:27:13" tests="1" time="2.782" failures="0">
+    <testcase name="TC001 Login Page TC001.01 Login with valid credentials should login successfully" time="2.686" classname="should login successfully">
+    </testcase>
+  </testsuite>
+  <testsuite name="TC001.02 Login with invalid credentials" timestamp="2026-06-11T18:27:16" tests="1" time="1.080" failures="0">
+    <testcase name="TC001 Login Page TC001.02 Login with invalid credentials should display an error message with invalid credentials" time="1.013" classname="should display an error message with invalid credentials">
+    </testcase>
+  </testsuite>
+</testsuites>

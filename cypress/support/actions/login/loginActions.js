@@ -1,4 +1,4 @@
-import {loginPageLocators as lPL} from "../locators/login_page";
+import {loginPageLocators as lPL} from "../../locators/login_page";
 
 class LoginActions{
     visitPage(){
