@@ -1,5 +1,5 @@
 export const inventoryPageLocators = {
-
+ // Products
  backpack:"[data-test='item-4-title-link']",
  backpaackAddToCart:"[data-test='add-to-cart-sauce-labs-backpack']",
  boltTshirt:"[data-test='item-1-title-link']",
@@ -12,11 +12,12 @@ export const inventoryPageLocators = {
  fleeceJacketAddToCart:"[data-test='add-to-cart-sauce-labs-fleece-jacket']",
  allTheThingsTshirt:"[data-test='item-3-title-link']",
  allTheThingsTshirtAddToCart:"[data-test='add-to-cart-sauce-labs-allthethings-t-shirt']",
-
+// Icons
 cartIcon:"[class='shopping_cart_link']",
 nameAtoZ:"[data-test='product_sort_container'] option[value='az']",
 nameZtoA:"[data-test='product_sort_container'] option[value='za']",
 priceLowToHigh:"[data-test='product_sort_container'] option[value='lohi']",
 priceHighToLow:"[data-test='product_sort_container'] option[value='hilo']",
-burgerMenu:"[data-test='header-container']"
+burgerMenu:"[data-test='header-container']",
+inventoryList:"[data-test='inventory-list']"
 };
